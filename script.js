@@ -45,14 +45,9 @@ function calculatePlasticFootprint() {
   updateProgressBar(totalKg);
 }
 
-onload = function () {
-  document.getElementById("progress").style.display = "hidden";
-};
-
 // Update progress bar
 function updateProgressBar(footprintKg) {
   const progressBar = document.getElementById("progress-fill");
-  document.getElementById("progress").style.display = "block";
   const maxFootprint = 100;
   const percentage = (footprintKg / maxFootprint) * 100;
   progressBar.style.width = Math.min(percentage, 100) + "%";
